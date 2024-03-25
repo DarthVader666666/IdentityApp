@@ -1,0 +1,21 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@model IEnumerable<IdentityRole>
+@{
+    ViewData["Title"] = "Roles Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">@ViewData["Title"]</h1>
+    <div>
+        <ul>
+            @foreach (var item in Model)
+            {
+                <li>
+                    @item.Name
+                </li>
+            }
+        </ul>
+    </div>
+<div>
+    <a class="nav-link text-blue" asp-area="" asp-controller="Admin" asp-action="Index">Back</a>
+</div>
