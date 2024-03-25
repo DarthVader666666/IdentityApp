@@ -27,7 +27,9 @@ builder.Services.AddIdentity<User, IdentityRole>(
     //    opts.User.RequireUniqueEmail = true;    // уникальный email
     //    opts.User.AllowedUserNameCharacters = ".@abcdefghijklmnopqrstuvwxyz"; // допустимые символы
     //}
-    ).AddEntityFrameworkStores<IdentityTestDbContext>();
+    )
+    .AddEntityFrameworkStores<IdentityTestDbContext>()
+    .AddRoles<IdentityRole>();
 
     builder.Services.AddControllersWithViews();
 
