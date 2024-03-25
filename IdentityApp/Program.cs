@@ -28,8 +28,7 @@ builder.Services.AddIdentity<User, IdentityRole>(
     //    opts.User.AllowedUserNameCharacters = ".@abcdefghijklmnopqrstuvwxyz"; // допустимые символы
     //}
     )
-    .AddEntityFrameworkStores<IdentityTestDbContext>()
-    .AddRoles<IdentityRole>();
+    .AddEntityFrameworkStores<IdentityTestDbContext>();
 
     builder.Services.AddControllersWithViews();
 
